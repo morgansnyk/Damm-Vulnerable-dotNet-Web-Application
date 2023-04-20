@@ -80,13 +80,14 @@ namespace OWASP.WebGoat.NET.WebGoatCoins
                     {
                         //litOrderDetails.Text = "Error finding order number " + orderNumber + ". Details: " + ex.Message;
                         PanelShowDetailFailure.Visible = true;
-                        litErrorDetailMessage.Text = "Error finding order number " + orderNumber + ". Details: " + ex.Message;
+                        //remove code to remove vuln
+//                        litErrorDetailMessage.Text = "Error finding order number " + orderNumber + ". Details: " + ex.Message;
                     }
                 }
 
                 //check if they are trying to download the image
-                string target_image = Request["image"];
-                if (target_image != null)
+//                string target_image = Request["image"];
+//                if (target_image != null)
                 {
                     FileInfo fi = new FileInfo(Server.MapPath(target_image));
                     lblOutput.Text = fi.FullName;
